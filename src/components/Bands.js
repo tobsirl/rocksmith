@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BandsList from './BandsList';
-import BandService from './services/BandsService';
+import BandService from '../services/BandsService';
 
 class Bands extends Component {
 

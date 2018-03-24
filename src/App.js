@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Bands from './Bands';
+import Header from './components/Layout/Header';
+import NavigationBar from './components/Layout/NavigationBar';
+import Bands from './components/Bands';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+//import { Image } from 'react-bootstrap';
 
 class App extends Component {
   constructor() {
@@ -11,12 +16,17 @@ class App extends Component {
   }
   render() {
     return (
-      <div >
-        <Header title={this.state.title} />
-        <div className="mt-5">
-          <Bands />
+      <BrowserRouter>
+        <div>
+          {/*<Header title={this.state.title} />*/}
+          <NavigationBar />
+          <div className="mt-5">
+              <Route exact path="/" component={Home} />
+              <Route path="/bands" component={Bands} />
+              <Route path="/about" component={About} />
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }

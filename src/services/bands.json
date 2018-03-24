@@ -1,8 +1,23 @@
 [
     {
-    "id": 100,
-    "title": "Kingsglaive",
-    "subtitle": "Final Fantasy XV"
-    }   
+        "id": 100,
+        "title": "Kingsglaive",
+        "subtitle": "Final Fantasy XV"
+    },   
+    {
+        "id": 200,
+        "title": "Kingsglaive",
+        "subtitle": "Final Fantasy XV"
+    },  
+    {
+        "id": 300,
+        "title": "Kingsglaive",
+        "subtitle": "Final Fantasy XV"
+    },  
+    {
+        "id": 400,
+        "title": "Kingsglaive",
+        "subtitle": "Final Fantasy XV"
+    }    
 
 ]
