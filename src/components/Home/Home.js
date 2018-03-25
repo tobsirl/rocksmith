@@ -11,6 +11,7 @@ class Home extends Component {
                     <h2>Welcome to Rocksmith!</h2>
                     <p>This is how to build a website</p>
                 </Jumbotron>
+                <i className="mdi mdi-accessibility"></i>
                 <Link to="/about">
                     <Button bsStyle="primary">About</Button>
                 </Link>
