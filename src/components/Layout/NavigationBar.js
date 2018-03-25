@@ -6,13 +6,12 @@ import './NavigationBar.css';
 class NavigationBar extends Component {
     render() {
         return (
-            <Navbar inverse collapseOnSelect>
+            <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/">Rocksmith</Link>
+                        Rocksmith
                     </Navbar.Brand>
-                </Navbar.Header>
-                    <Navbar.Collapse>
+                </Navbar.Header>                
                         <Nav pullRight>
                             <NavItem eventKey={1} componentClass={Link} href="/" to="/">
                                 Home
@@ -24,7 +23,7 @@ class NavigationBar extends Component {
                                 About
                             </NavItem>
                         </Nav>
-                    </Navbar.Collapse>
+        
             </Navbar>
         );
     }

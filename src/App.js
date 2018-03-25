@@ -5,6 +5,7 @@ import Bands from './components/Bands';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Footer from './components/Layout/Footer';
 //import { Image } from 'react-bootstrap';
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
               <Route path="/bands" component={Bands} />
               <Route path="/about" component={About} />
           </div>
+          <Footer />
         </div>
       </BrowserRouter>
     );

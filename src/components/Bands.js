@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import BandsList from './BandsList';
 import BandService from '../services/BandsService';
+import axios from '../axios';
+
 
 class Bands extends Component {
 
@@ -12,7 +14,15 @@ class Bands extends Component {
         };
     }
     componentDidMount() {
-        this.setState(() => ({ bands: BandService.getBands() }));
+        //this.setState(() => ({ bands: BandService.getBands() }));
+        axios.get('/users')
+            .then(res => {
+                const bands = res.data;
+                this.setState({bands: bands});
+            })
+            .catch(err => {
+                console.log( err );
+            });
     }
 
 

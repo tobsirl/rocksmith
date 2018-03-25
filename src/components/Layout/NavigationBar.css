@@ -34,6 +34,7 @@ nav.navbar, .navbar-default {
   }
   
   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: white;
+    color: rgb(143, 29, 29);
     background-color: transparent;
   }
+  
