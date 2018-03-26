@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './components/Layout/Header';
+//import Header from './components/Layout/Header';
 import NavigationBar from './components/Layout/NavigationBar';
 import Bands from './components/Bands';
 import { BrowserRouter, Route } from 'react-router-dom';

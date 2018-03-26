@@ -23,12 +23,12 @@ class Band extends Component {
     }
   
     render() {
-        let band = '';
+        
         return (
             <div className="card" onClick={this.bandSelectedHandler}>
                 <div className="card-body">
-                    <h4 className="card-title">{this.props.band.name}</h4>
-                    <h6 className="card-subtitle mb-2 text-muted">{this.props.band.email}</h6>
+                    <h4 className="card-title">{this.props.band.title}</h4>
+                    <h6 className="card-subtitle mb-2 text-muted">{this.props.band.subtitle}</h6>
                     <Button bsStyle="success" bsSize="small" onClick={this.editBandHandler}>Edit</Button>
                     <Button bsStyle="danger" bsSize="small" onClick={this.deleteBandHandler}>Delete</Button>
                 </div>

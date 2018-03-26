@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BandsList from './BandsList';
-import BandService from '../services/BandsService';
+//import BandService from '../services/BandsService';
 import axios from '../axios';
 
 
@@ -15,7 +15,7 @@ class Bands extends Component {
     }
     componentDidMount() {
         //this.setState(() => ({ bands: BandService.getBands() }));
-        axios.get('/users')
+        axios.get('/bands')
             .then(res => {
                 const bands = res.data;
                 this.setState({bands: bands});
@@ -32,6 +32,7 @@ class Bands extends Component {
                 <div className="d-flex flex-row">                    
                     <div className="col-sm-12">
                         <BandsList bands={this.state.bands} />
+                        {console.log(this.state.bands)}
                     </div>
                 </div>
             </div>
