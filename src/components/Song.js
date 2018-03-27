@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle, Button } from 'reactstrap';
-//import Bands from './Bands';
+import axios from 'axios';
 import './Song.css';
+import Buttons from './config/ButtonsConfig';
 
 class Song extends Component {
     state = {
@@ -11,38 +10,84 @@ class Song extends Component {
         artistName: this.props.song.artistName,
         difficulty: this.props.song.difficulty,
         speed: this.props.song.speed,
-        imageUrl: this.props.geUrl
-
+        imageUrl: this.props.geUrl,
+        status: ''
     }
 
     // bandSelectedHandler = (id) => {
     //     //this.props.history.push ( '/bands/' + id);
     //     console.log('You clicked here' + id);
     // }
-
-    editBandHandler = () => {
-        console.log('Edit');
+    viewSongHandler = ( id ) => {
+        console.log('View');
     }
 
-    deleteBandHandler = () => {
+    editSongHandler = () =>  this.setState({ status : 'edit'} );
+
+    cancelSongHandler = () => {
+              this.setState({ status : '', 
+              songName: this.props.song.songName,
+              artistName: this.props.song.artistName,
+              difficulty: this.props.song.difficulty,
+              speed: this.props.song.speed } ) ;
+    };
+    
+    saveSongHandler = (event) => {
+        event.preventDefault();
+        let songName = this.state.songName.trim();
+        let artistName = this.state.artistName.trim();
+        let difficulty = this.state.difficulty.trim();
+        let speed = this.state.speed.trim();
+        if (!songName || !artistName || !difficulty || !speed) {
+           return;
+        }
+        this.setState({status : ''} )
+        this.props.updateHandler(this.props.song.songName,
+            artistName, difficulty, speed);
+      };      
+    
+
+    deleteSongHandler = (id) => {
+        
         console.log('Delete');
+        axios.delete('http://localhost:3100/songs/' + id)
+            .then(res => {
+                console.log(res);
+            });
     }
   
-    render() {   
+    render() {  
+        let activeButtons = Buttons.normal;
+        let leftButtonHandler = this.handleEdit;
+        let rightButtonHandler = this.cancelSongHandler;
+        let fields = [
+            <p key={'songName'}>{this.state.songName}</p>,
+            <p key={'artistName'} >{this.state.artistName}</p>,
+            <p key={'difficulty'} >{this.state.difficulty}</p>,
+            <p key={'speed'} >{this.state.speed}</p>
+           ] ;
+           if (this.state.status === 'edit' ) {
+            activeButtons = Buttons.edit ;
+            leftButtonHandler = this.saveSongHandler;
+            rightButtonHandler = this.handleCancel ;
+            fields = [
+                <input type="text" className="form-control"
+                   value={this.state.songName}
+                   onChange={( event ) => this.setState( { songName: event.target.value } )} />,
+                <input type="text" className="form-control"
+                   value={this.state.artistName}
+                   onChange={( event ) => this.setState( { artistName: event.target.value } )} />,
+                <input type="text" className="form-control"
+                   value={this.state.phone_number}
+                   onChange={( event ) => this.setState( { difficulty: event.target.value } )} />,
+                <input type="text" className="form-control"
+                   value={this.state.phone_number}
+                   onChange={( event ) => this.setState( { speed: event.target.value } )} />
+             ] ;
+         }    
+
         return (
            <div>
-               {/*<Card>
-        <CardBody>
-          <CardTitle>{this.props.song.songName}</CardTitle>
-          <CardSubtitle>{this.props.song.artistName}</CardSubtitle>
-          </CardBody>
-          <CardImg width="100%" src={this.props.song.imageUrl} alt="" />
-          {console.log(this.props.song.imageUrl)}
-          <CardBody>
-          <Button onClick={this.editBandHandler} outline color="success">Edit</Button>
-          <Button onClick={this.deleteBandHandler} outline color="danger">Delete</Button>
-        </CardBody>
-               </Card>*/}
         <div className="col-md-6">
               <div className="card mb-4 box-shadow">
                 <img className="card-img-top" src={this.props.song.imageUrl} alt="Card image cap" />
@@ -50,14 +95,28 @@ class Song extends Component {
                 <h5 className="card-title">{this.props.song.songName}</h5>
                 <p className="card-text">{this.props.song.artistName}</p>
                 <ul className="list-group list-group-flush">
-    <li className="list-group-item">Difficulty: {this.props.song.difficulty}</li>
-    <li className="list-group-item">Speed: {this.props.song.speed}</li>
-  </ul>
+                <li className="list-group-item">Difficulty: {this.props.song.difficulty}</li>
+                <li className="list-group-item">Speed: {this.props.song.speed}</li>
+                </ul>
                   <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                   <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary" onClick={this.editBandHandler}>Edit</button>
+                    <div >
+                      <button 
+                            type="button" 
+                            className="btn btn-sm btn-outline-success" 
+                            onClick={this.viewSongHandler}>View</button>
+                      <button 
+                            type="button" 
+                            className="btn btn-sm btn-outline-warning"
+                            onClick={leftButtonHandler}>Edit
+                        
+                      </button>
+                      <button 
+                            type="button" 
+                            className="btn btn-sm btn-outline-danger" 
+                            onClick={rightButtonHandler}>Delete
+                        
+                      </button>
                     </div>
                     <small className="text-muted">9 mins</small>
                   </div>

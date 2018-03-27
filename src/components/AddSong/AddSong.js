@@ -69,7 +69,7 @@ class AddSong extends Component {
                     <button type="submit" 
                             className="btn btn-primary" 
                             onClick={this.postSongHandler}>Add Post</button>
-                </form>    
+                </form>  
             </div>
         );
     }
