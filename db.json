@@ -1,28 +1,43 @@
 {
-    "bands":[
+  "songs": [
     {
-        "id": 100,
-        "title": "Pearl Jam",
-        "subtitle": "Final Fantasy XV",
-        "imageUrl": "./src/images/PearlJamCard.jpg"
-    },   
+      "id": 100,
+      "songName": "Even Flow",
+      "artistName": "Pearl Jam",
+      "difficulty": "100",
+      "speed": "85",
+      "imageUrl": "./src/images/PearlJamCard.jpg"
+    },
     {
-        "id": 200,
-        "title": "Today",
-        "subtitle": "Final Fantasy XV",
-        "imageUrl": "./public/assets/images/PearlJamCard.jpg"
-    },  
+      "id": 200,
+      "songName": "Today",
+      "artistName": "Smashing Pumpkins",
+      "difficulty": "100",
+      "speed": "70",
+      "imageUrl": "./src/images/PearlJamCard.jpg"
+    },
     {
-        "id": 300,
-        "title": "Kingsglaive",
-        "subtitle": "Final Fantasy XV",
-        "imageUrl": "./public/assets/images/PearlJamCard.jpg"
-    },  
+      "id": 300,
+      "songName": "Smells Like Teen Spirit",
+      "artistName": "Nirvana",
+      "difficulty": "80",
+      "speed": "70",
+      "imageUrl": "./src/images/PearlJamCard.jpg"
+    },
     {
-        "id": 400,
-        "title": "Kingsglaive",
-        "subtitle": "Final Fantasy XV",
-        "imageUrl": "./public/assets/images/PearlJamCard.jpg"
-    }    
-]
+      "id": 400,
+      "songName": "The Boys Are Back In Town",
+      "artistName": "Thin Lizzy",
+      "difficulty": "100",
+      "speed": "85",
+      "imageUrl": "./src/images/PearlJamCard.jpg"
+    },
+    {
+      "songName": "test",
+      "artistName": "sdasdf",
+      "difficulty": "45",
+      "speed": "65",
+      "id": 401
+    }
+  ]
 }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 //import Header from './components/Layout/Header';
 import NavigationBar from './components/Layout/NavigationBar';
-import Bands from './components/Bands';
+import Songs from './components/Songs';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Footer from './components/Layout/Footer';
+import AddSong from './components/AddSong/AddSong';
 //import { Image } from 'react-bootstrap';
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
           <div className="mt-5">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/bands" component={Bands} />
+                <Route path="/Addsong" component={AddSong} />
+                <Route path="/songs" component={Songs} />
                 <Route path="/about" component={About} />
               </Switch>
           </div>

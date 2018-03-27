@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import BandsList from './BandsList';
+import SongsList from './SongsList';
 //import BandService from '../services/BandsService';
 import axios from '../axios';
 
 
-class Bands extends Component {
+class Songs extends Component {
 
     constructor() {
         super();
         
         this.state = {
-            bands: []
+            songs: []
         };
     }
     componentDidMount() {
-        //this.setState(() => ({ bands: BandService.getBands() }));
-        axios.get('/bands')
+        
+        axios.get('/songs')
             .then(res => {
-                const bands = res.data;
-                this.setState({bands: bands});
+                const songs = res.data;
+                this.setState({songs: songs});
             })
             .catch(err => {
                 console.log( err );
@@ -31,8 +31,8 @@ class Bands extends Component {
             <div className="container-fluid" style={{marginLeft: '-15px'}}>
                 <div className="d-flex flex-row">                    
                     <div className="col-sm-12">
-                        <BandsList bands={this.state.bands} />
-                        {console.log(this.state.bands)}
+                        <SongsList songs={this.state.songs} />
+                        {console.log(this.state.songs)}
                     </div>
                 </div>
             </div>
@@ -40,4 +40,4 @@ class Bands extends Component {
     }
 }
 
-export default Bands;
+export default Songs;

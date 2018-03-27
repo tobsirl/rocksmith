@@ -1,9 +1,9 @@
 import bands from './bands.json';
 
-class BandService {
-    static getBands() {
-        return bands ? bands : [];
+class SongService {
+    static getSongs() {
+        return songs ? songs : [];
     }
 }
 
-export default BandService;
+export default SongService;
