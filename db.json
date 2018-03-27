@@ -2,23 +2,27 @@
     "bands":[
     {
         "id": 100,
-        "title": "Kingsglaive",
-        "subtitle": "Final Fantasy XV"
+        "title": "Pearl Jam",
+        "subtitle": "Final Fantasy XV",
+        "imageUrl": "./src/images/PearlJamCard.jpg"
     },   
     {
         "id": 200,
         "title": "Today",
-        "subtitle": "Final Fantasy XV"
+        "subtitle": "Final Fantasy XV",
+        "imageUrl": "./public/assets/images/PearlJamCard.jpg"
     },  
     {
         "id": 300,
         "title": "Kingsglaive",
-        "subtitle": "Final Fantasy XV"
+        "subtitle": "Final Fantasy XV",
+        "imageUrl": "./public/assets/images/PearlJamCard.jpg"
     },  
     {
         "id": 400,
         "title": "Kingsglaive",
-        "subtitle": "Final Fantasy XV"
+        "subtitle": "Final Fantasy XV",
+        "imageUrl": "./public/assets/images/PearlJamCard.jpg"
     }    
 ]
 }

@@ -1,32 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, NavLink, Nav, NavItem } from 'reactstrap';
 
 const Footer = (props) => {
     return (
         <div>
-            <Navbar>
-  <Navbar.Header>
-    <Navbar.Brand>
-      <a href="#home">React-Bootstrap</a>
-    </Navbar.Brand>
-  </Navbar.Header>
-  <Nav pullRight>
-    <NavItem eventKey={1} href="#">
-      Link
-    </NavItem>
-    <NavItem eventKey={2} href="#">
-      Link
-    </NavItem>
-  </Nav>
-</Navbar>
+          <Navbar>
+           <Nav>
+          <NavItem>
+            <NavLink href="#">Link</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Link</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Another Link</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink disabled href="#">Disabled Link</NavLink>
+          </NavItem>
+        </Nav>
+        </Navbar>
             
         </div>
     );
 };
 
-Footer.propTypes = {
-    
-};
 
 export default Footer;

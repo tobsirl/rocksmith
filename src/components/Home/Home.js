@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Jumbotron, Grid, Row, Col, Image, Button} from 'react-bootstrap';
+import { Jumbotron, Button} from 'reactstrap';
 import './Home.css'
+import Rocksmith2014Edition_Logo from '../../images/PearlJamCard.jpg';
+
 
 class Home extends Component {
     render() {
         return (
-            <Grid>
+            <div>
                 <Jumbotron>
                     <h2>Welcome to Rocksmith!</h2>
                     <p>This is how to build a website</p>
                 </Jumbotron>
-                <i className="mdi mdi-accessibility"></i>
                 <Link to="/about">
-                    <Button bsStyle="primary">About</Button>
+                    <Button outline color="primary">About</Button>
                 </Link>
                 <Link to="/bands">
-                    <Button bsStyle="primary">Bands</Button>
+                    <Button outline color="primary">Bands</Button>
                 </Link>
-            </Grid>
+                <img src={Rocksmith2014Edition_Logo}/>
+            </div>
                 
             
         );

@@ -1,0 +1,14 @@
+.movie-card {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
+    width: 200px;
+}
+
+.movie-card.card {
+    height: 250px;
+}
+
+.card-footer-badge {
+    font-size: 1rem;
+}
