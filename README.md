@@ -61,7 +61,7 @@ Open [http://localhost:3100/songs](http://localhost:3100/songs) to view it in th
   }
 ```
 ## Components
-![Components](images/Component.png)
+![component](https://user-images.githubusercontent.com/25591390/38022554-b9cb1432-3277-11e8-9d3f-2515d556f861.png)
 
 * NavigationBar
 * Songs
