@@ -65,7 +65,7 @@ Open [http://localhost:3100/songs](http://localhost:3100/songs) to view it in th
 
 * NavigationBar
 * Songs
-* SongsList
+* SongsList 
 * Song
 * Footer
 * Home

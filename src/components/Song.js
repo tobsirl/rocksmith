@@ -88,7 +88,8 @@ class Song extends Component {
 
         return (
            <div>
-        <div className="col-md-6">
+               <div className="row" />
+        <div className="col-md-4">
               <div className="card mb-4 box-shadow">
                 <img className="card-img-top" src={this.props.song.imageUrl} alt="Card image cap" />
                 <div className="card-body">
@@ -98,7 +99,7 @@ class Song extends Component {
                 <li className="list-group-item">Difficulty: {this.props.song.difficulty}</li>
                 <li className="list-group-item">Speed: {this.props.song.speed}</li>
                 </ul>
-                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p className="card-text"></p>
                   <div className="d-flex justify-content-between align-items-center">
                     <div >
                       <button 

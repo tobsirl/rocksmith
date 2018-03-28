@@ -7,16 +7,13 @@ const Footer = (props) => {
           <Navbar>
            <Nav>
           <NavItem>
-            <NavLink href="#">Link</NavLink>
+            <NavLink href="https://github.com/facebook/create-react-app">React</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Link</NavLink>
+            <NavLink href="https://github.com/typicode/json-server">Json-server</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Another Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">Disabled Link</NavLink>
+            <NavLink href="https://github.com/axios/axios">Axios</NavLink>
           </NavItem>
         </Nav>
         </Navbar>

@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 import { Media } from 'reactstrap';
+import RocksmithBuy from '../../images/RSPlatforms.png';
+import './About.css';
 
 class About extends Component {
     render() {
         return (
-            <div>
-                <Media>
-      <Media left href="#">
-        <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
-      </Media>
-      <Media body>
-        <Media heading>
-          Media heading
-        </Media>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-      </Media>
-    </Media>
-            </div>
+          <div>
+          <Media>
+            <Media left top href="#">
+              <Media object src={RocksmithBuy} alt="Generic placeholder image" />
+            </Media>
+            <Media body>
+              <Media heading>
+              A PROVEN METHOD
+              </Media>
+              Rocksmith becomes your personal guitar teacher as it monitors how you play, dynamically adjusts the difficulty to your skill level, then slowly introduces more notes and phrases until you’re playing your favorite songs note-for-note.
+            </Media>
+          </Media>
+          
+        </div>
+
+       
+
+      
+                
+            
         );
     }
 }

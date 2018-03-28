@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { Navbar, Nav, NavItem, Button, FormControl, FormGroup } from 'react-bootstrap';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavigationBar.css';
 
@@ -12,15 +12,14 @@ class NavigationBar extends Component {
   
     render() {
         return (
-   
-        <div>
+    <div>
+         
+  
+    
         <Navbar color="faded" dark expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Rocksmith</NavbarBrand>
             <Nav className="ml-auto" navbar>
-            <form className="form-inline mt-2 mt-md-0">
-          <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+         
             
               <NavItem>
                 <NavLink href="/">Home</NavLink>
@@ -41,7 +40,7 @@ class NavigationBar extends Component {
         </Navbar>
 
         </div>
-      
+        
 
         );
     }
